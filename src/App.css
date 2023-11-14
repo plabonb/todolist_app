@@ -1,3 +1,12 @@
-.App {
-  text-align: center;
-}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(5, 2, 2);
+  }
+  
+  /* Other CSS rules for styling specific components, classes, or IDs */
+  
