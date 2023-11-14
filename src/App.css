@@ -7,6 +7,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: rgb(5, 2, 2);
   }
+
+ html{
+    background-color: black;
+  }
   
   /* Other CSS rules for styling specific components, classes, or IDs */
   
