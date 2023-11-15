@@ -1,4 +1,4 @@
-import { Flex, Input } from "@chakra-ui/react";
+import { Button, Flex, Input, Text } from "@chakra-ui/react";
 
 import React, { useState } from 'react';
 
@@ -18,7 +18,7 @@ const Login = ({ onLogin }) => {
     // Simulate successful login (replace this with actual login logic)
     // For example, you can send a login request to the server here
     console.log('Login form submitted:', formData);
-    
+
     // Assuming login is successful, call the onLogin function passed from App
     // Pass the username to the onLogin function
     onLogin(formData.username); // Update isLoggedIn state in the App component and pass the username
@@ -27,8 +27,9 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <Flex>
-      <h2>Login</h2>
+    <div>
+      <Text>Login</Text>
+      <br />
       <form onSubmit={onSubmit}>
         <Flex>
           <Input
@@ -51,9 +52,9 @@ const Login = ({ onLogin }) => {
             required
           />
         </Flex>
-        <Input type="submit" value="Login" />
       </form>
-    </Flex>
+      <Button><Input type="submit" value="Login" /></Button>
+    </div>
   );
 };
 

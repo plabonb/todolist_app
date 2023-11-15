@@ -208,11 +208,17 @@ const App = () => {
           {view === 'login' && <Login onLogin={handleLogin} />}
           {view === 'register' && <Register onRegister={handleRegister} />}
           {view === 'welcome' && (
-            <div style={{textAlign: 'center'}}>
-              <Text m='5px' mt='30px' fontSize='30px'>Welcome to <span color="green">TO-DO</span> App</Text>
-              <Button onClick={() => setView('login')}>Login</Button>
-              <Button m='5px' onClick={() => setView('register')}>Register</Button>
+            <div>
+              <Flex w='100%' mt='30px'>
+                <Text m='auto' mt='30px' fontSize='30px'>Welcome to <span>TO-DO</span> App</Text>
+
+              </Flex>
+              <Flex w='100%' mt='50px' justify='center'>
+                <Button m='5px' onClick={() => setView('login')}>Login</Button>
+                <Button m='5px' onClick={() => setView('register')}>Register</Button>
+              </Flex>
             </div>
+
           )}
           {view !== 'welcome' && (
             <Button onClick={handleBackToWelcome}>Back to Welcome</Button>

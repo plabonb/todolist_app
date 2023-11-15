@@ -1,4 +1,4 @@
-import { Flex, Input, Button } from "@chakra-ui/react";
+import { Flex, Input, Button, Text } from "@chakra-ui/react";
 
 import React, { useState } from 'react';
 
@@ -47,10 +47,11 @@ const Register = ({ onRegister }) => {
   };
 
   return (
+    <>
     <Flex>
-      <h2>Register</h2>
+      <Text textAlign='center'>Register</Text>
       <form onSubmit={onSubmit}>
-        <div>
+        <Flex>
           <Input
             type="text"
             placeholder="Username"
@@ -59,8 +60,8 @@ const Register = ({ onRegister }) => {
             onChange={onChange}
             required
           />
-        </div>
-        <div>
+          </Flex>
+          <Flex>
           <Input
             type="email"
             placeholder="Email"
@@ -69,8 +70,8 @@ const Register = ({ onRegister }) => {
             onChange={onChange}
             required
           />
-        </div>
-        <div>
+          </Flex>
+          <Flex>
           <Input
             type="password"
             placeholder="Password"
@@ -80,8 +81,8 @@ const Register = ({ onRegister }) => {
             minLength="6"
             required
           />
-        </div>
-        <div>
+          </Flex>
+          <Flex>
           <Input
             type="password"
             placeholder="Confirm Password"
@@ -91,10 +92,11 @@ const Register = ({ onRegister }) => {
             minLength="6"
             required
           />
-        </div>
+        </Flex>
       </form>
       <Button onClick={handleRegistration}>Register</Button>
     </Flex>
+    </>
   );
 };
 
