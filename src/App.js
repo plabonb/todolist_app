@@ -65,11 +65,11 @@ const App = () => {
     newTasks.splice(index, 1);
     setTasks(newTasks);
   };
-  const users = [
-    { id: '', name: (`username`), avatarColor: "teal.500" },
-    // Add more users as needed
-  ];
   const [selectedUser, setSelectedUser] = useState(null);
+const users = [
+  { id: '', name: selectedUser ? selectedUser.name : '', avatarColor: "teal.500" },
+  // Add more users as needed
+];
 
   const handleUserClick = (user) => {
     setIsLoggedIn(true);
@@ -103,9 +103,9 @@ const App = () => {
             <Flex>
               {/* Adjust 'userName' variable or replace it with the actual user's name */}
               <Text margin="auto">
-                <span style={{ fontWeight: "bold" }}>Welcome</span>
+                <span style={{ fontWeight: "bold" }}>Welcome </span>
                 {/* Check if selectedUser exists before accessing its name property */}
-                {selectedUser && <span>{selectedUser.name}</span>}
+                {selectedUser && <span style={{ textTransform: 'uppercase' }}>{selectedUser.name}</span>}
                 <br />
                 <span style={{ fontWeight: "bold" }}> Add Your To-Do List</span>
               </Text>
@@ -221,7 +221,7 @@ const App = () => {
 
           )}
           {view !== 'welcome' && (
-            <Button onClick={handleBackToWelcome}>Back to Welcome</Button>
+            <Button m='auto' onClick={handleBackToWelcome}>Back to Welcome</Button>
           )}
         </>
       )}
