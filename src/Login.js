@@ -1,5 +1,4 @@
 import { Button, Flex, Input, Text } from "@chakra-ui/react";
-
 import React, { useState } from 'react';
 
 const Login = ({ onLogin }) => {
@@ -15,14 +14,9 @@ const Login = ({ onLogin }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // Simulate successful login (replace this with actual login logic)
-    // For example, you can send a login request to the server here
     console.log('Login form submitted:', formData);
 
-    // Assuming login is successful, call the onLogin function passed from App
-    // Pass the username to the onLogin function
-    onLogin(formData.username); // Update isLoggedIn state in the App component and pass the username
-    // Reset form after successful login (if needed)
+    onLogin(formData.username);
     setFormData({ username: '', password: '' });
   };
 
@@ -52,8 +46,8 @@ const Login = ({ onLogin }) => {
             required
           />
         </Flex>
+        <Button type="submit">Login</Button>
       </form>
-      <Button><Input type="submit" value="Login" /></Button>
     </div>
   );
 };

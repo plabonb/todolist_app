@@ -5,11 +5,8 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
- html{
+html {
     background-color: black;
-  }
-  
-  /* Other CSS rules for styling specific components, classes, or IDs */
-  
+}
